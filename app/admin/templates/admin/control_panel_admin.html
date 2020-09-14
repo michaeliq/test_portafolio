@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+
+{% block tittle %} Admin Panel {% endblock %}
+
+{% block skill %}
+
+{% for user in users %}
+
+ <div>
+	 <input type='text' value={{user.username}}>
+	 <input type='email' value={{user.email}}>
+	 <input type='text' value={{user.password}}>
+	 {% if user.is_admin %}
+	 <label> True </label>
+	 <input type='radio' name='{{user.username}}' value='True' checked>
+	 <label> False </label>
+	 <input type='radio' name='{{user.username}}' value='False'>
+	 {% else %}
+	 <label> True </label>
+	 <input type='radio' name='{{user.username}}' value='True'>
+	 <label> False </label>
+	 <input type='radio' name='{{user.username}}' value='False' checked>
+	 {% endif %}
+ </div>
+
+{% endfor %}
+
+{% endblock %}

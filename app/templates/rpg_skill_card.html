@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block tittle %}
+Card RPG
+{% endblock %}
+
+{% block css %}
+<link type='text/css' rel='stylesheet' href="{{ url_for('static',filename='card.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class='card'>
+ <div class='card_img' >
+  <img src="{{url_for('static',filename='joan.jpg')}}">
+ </div>
+ <div class='card_text' >
+  <span class='date'>28-01-1994?</span>
+  <h2>Joan Camilo Muñoz P.</h2>
+  <p>Esta peligrosa criatura habita en las zons subdesarrolladas del continente latinoamericano. Su medio de transporte favorito es el Uber en promoción y le gusta la salchipapa</p>
+ </div>
+ <div class='title_skill'>
+  <h3> Attributes </h3>
+ </div>
+ <div class='card_stats' >
+  <div class='stats'> 
+   <div class='value'>1.80<sup>m</sup>?</div>
+   <div class='type'>height</div>
+  </div>
+  <div class='stats border'>
+   <div class='value'>70<sup>Kg</sup>?</div>
+   <div class='type'>weight</div>
+  </div>
+  <div class='stats'>                  
+   <div class='value'>Mucho</div>
+   <div class='type'>sex</div>
+  </div>
+ </div>
+</div>
+
+{% endblock %}

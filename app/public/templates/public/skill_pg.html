@@ -1,0 +1,40 @@
+{% extends "home.html" %}
+
+{% block tittle %}Josué Castillos - Skill:{{skill.target}} {% endblock %}
+
+{% block css %}
+<link href="{{ url_for('static',filename='style.css') }}" rel="stylesheet" type="text/css" >
+{% endblock %}
+
+{% block skill %}
+
+<h3>Skill: {{skill.target}}</h3>
+<p> {{ skill.description }} </p>
+
+<a href="{{url_for('admin.delete_tag',id_=skill.id ) }}"> Delete Tag </a>
+
+<form action="{{url_for('admin.update_tag')}}", method="post" >
+{{ form.hidden_tag() }}
+<p>Update your skill</p>
+
+<div>
+	{{ form.id_hidden }}
+</div>
+
+<div>
+	{{ form.knowlegd.label }}
+	{{ form.knowlegd }}
+</div>
+
+<div>
+	{{ form.description.label }}
+	{{ form.description }}
+</div>
+
+<div>
+	{{ form.submit }}
+</div>
+
+</form>
+
+{% endblock %}

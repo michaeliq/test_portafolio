@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block tittle %} Roquet {% endblock %}
+
+{% block css %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='roquet.css') }}" type="text/css" >
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+{% endblock %}
+
+{% block content %}
+
+ <div class="scene">
+  <div class="roquet"> 
+   <img src="{{url_for('static',filename='rocket.png')}}" rel="roquet.png">
+   <p id="parrafo"></p>
+ </div>
+ </div>
+
+<script type= "text/javascript" src="https://raw.githubusercontent.com/michaeliq/library_js_m/master/start.js?token=AKZ2DR3BVHRQEZ5PPUNRUW27A7EOS"></script>
+
+{% endblock %}

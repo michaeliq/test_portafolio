@@ -1,0 +1,39 @@
+{% extends 'home.html' %}
+
+{% block tittle %}
+	New Tag Form
+{% endblock %}
+
+{% block skill %}
+<form method="POST" action="" novalidate>
+	{{ form.hidden_tag() }}
+
+	<div>
+	 {{ form.target.label }}
+	 {{ form.target }}
+	 {% for error in form.target.errors %}
+	 <span style="color:red"> {{error}} </span>
+	 {% endfor %}
+	</div>
+
+	<div>
+	 {{ form.knowlegd.label }}
+	 {{ form.knowlegd }}
+	 {% for error in form.knowlegd.errors %}                           
+	 <span style="color:red"> {{error}}
+</span>
+         {% endfor %}
+	</div>
+
+	<div>
+	 {{ form.description.label }}
+	 {{ form.description }}
+	 {% for error in form.description.errors %}                                
+	 <span style="color:red"> {{error}}
+</span>
+         {% endfor %}
+	</div>
+
+	<div>{{ form.submit }}</div>
+</form>
+{% endblock %}

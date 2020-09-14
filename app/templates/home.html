@@ -1,0 +1,52 @@
+{% extends "index.html" %}
+
+{% block tittle %} Home {% endblock %}
+
+{% block css %} <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}"> {% endblock %}
+
+{% block content %}
+
+<header>
+<nav>
+<ul>            
+<li><a href="#">inicio</a></li>
+<li><a href="#">portafolio</a></li>
+<li><a href="#">contacto</a></li>
+</ul>
+</nav>
+</header>
+<div class='case'>
+ <div class='meet_card'>
+  <div class='cont_img'>
+   <span></span>
+   <img src="../static/cat-986426_960_720.webp">
+   <div class='cont_img_text'>
+    <p>Josué Castillo</p>
+    <p>24 años</p>                               <p>michaelesacol@gmail.com</p>
+   </div>
+ </div>
+ <div class='cont_text_meet'>
+
+{% block skill %}
+  <form method='Post'>                      
+   <label> Skill Options</label>     
+
+   <select name='options'>
+    {% for skill in skills %}  
+    <option value="{{skill.id}}">{{skill.target}}</option>
+
+    {% else %}
+     <li>No hay entradas</li>
+    {% endfor %}
+   </select>
+
+   <input type="submit" value="send">    
+  </form>
+  {% endblock %}
+
+  </div>        
+ </div>
+</div>
+{% endblock %}
+</body>
+</html>

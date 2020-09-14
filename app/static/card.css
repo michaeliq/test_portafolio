@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+	margin:0;
+	padding:0;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: linear-gradient(rgba(0,0,0,1)0%,rgba(20,20,20,.7)30%,rgba(140,140,140,.6)60%,rgba(0,0,0,1)100%);
+	align-items: center;
+	justify-content: center;
+}
+
+.card {
+	display:grid;
+	grid-template-columns: 500px;
+	grid-template-rows: 510px 350px 40px 155px;
+	grid-template-areas: 'image' 'text' 'skill' 'stats';
+
+	border-radius: 14px;
+	box-shadow: 14px 14px 10px #0009;
+	font-family:'Roboto', sans-serif;
+	text-align: center;
+	background: #fff;
+}
+
+.card_img{
+	grid-area: image;
+}
+
+.card_img img{
+	height: 100%;
+	width:100%;
+	object-fill: cover;
+	object-position: center center;
+	border-top-right-radius: 14px;
+	border-top-left-radius: 14px;
+}
+
+.card_text{
+	grid-area: text;
+	margin: 25px;
+}
+
+.card_text .date{
+	font-size: 14px;
+	color: rgb(140,0,56);
+}
+
+.card_text p{
+	font-size: 14px;
+	color: rgb(144,144,144);
+}
+.card_text h2{
+	font-size: 38px;
+	font-weight: 900;
+	margin-top: 0;
+}
+
+.title_skill{
+	grid-area: skill;
+	background-color: rgb(8,8,8);
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	border-bottom: 1px solid rgb(255,255,255);
+}
+
+.title_skill h3{
+	font-size: 30px;
+	color: white;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.card_stats {
+	grid-area: stats;
+	display: grid;
+	background-color: rgb(8,8,8);
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	border-bottom-right-radius: 14px;
+	border-bottom-left-radius: 14px;
+	color: #fff;
+}
+
+.card_stats .stats{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 20px;
+}
+
+.card_stats .value{
+	display:block;
+	width:100%;
+	font-weight: 500;
+	font-size: 26px;
+}
+
+.card_stats .type{
+	font-weight: 200;
+	font-size: 12px;
+	color: #fff9;
+	text-transform: uppercase;
+}
+
+.card_stats .border{
+	border-right:1px solid #fff;
+	border-left:1px solid #fff;
+}
