@@ -1,4 +1,4 @@
-from config.default import *
+from config.default_config import *
 
 APP_ENV = APP_ENV_TESTING
 
